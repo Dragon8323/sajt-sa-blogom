@@ -3,6 +3,7 @@ title: "Parrots as Pets: What They're Really Like to Live With"
 date: "2026-08-10"
 description: "Colorful, clever, and louder than you'd expect — here's what a parrot actually changes about your home."
 tags: ["Birds", "Care"]
+coverImage: "/posts/parrots-as-pets-life-at-home.jpg"
 ---
 
 Parrots aren't background pets. They're loud, curious, opinionated, and smart enough to notice
