@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getAllPosts, getPostBySlug, formatDate } from "@/lib/posts";
 import TagBadge from "@/components/TagBadge";
 import PostHero from "@/components/PostHero";
+import ShareButtons from "@/components/ShareButtons";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -49,6 +50,8 @@ export default async function BlogPostPage({
           className="prose prose-zinc mt-8 dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+
+        <ShareButtons title={post.title} />
       </div>
     </div>
   );

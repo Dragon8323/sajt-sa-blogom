@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTagColor } from "@/lib/tagColors";
 
 export default function TagBadge({
   tag,
@@ -7,13 +8,13 @@ export default function TagBadge({
   tag: string;
   active?: boolean;
 }) {
+  const color = getTagColor(tag);
+
   return (
     <Link
       href={active ? "/blog" : `/blog?tag=${encodeURIComponent(tag)}`}
       className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
-        active
-          ? "border-red-500 bg-red-500 text-white"
-          : "border-black/[.08] text-zinc-600 hover:border-red-500 hover:text-red-500 dark:border-white/[.145] dark:text-zinc-400"
+        active ? color.active : color.inactive
       }`}
     >
       {tag}

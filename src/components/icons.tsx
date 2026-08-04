@@ -45,6 +45,14 @@ export function YouTubeIcon({ className = "size-4" }: { className?: string }) {
   );
 }
 
+export function LinkedInIcon({ className = "size-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 4a1.96 1.96 0 1 0 0 3.92A1.96 1.96 0 0 0 5.25 4ZM20.44 20v-6.34c0-3.4-1.81-4.98-4.23-4.98a3.65 3.65 0 0 0-3.31 1.82h-.05V8.5H9.63V20H13v-5.79c0-1.53.29-3 2.18-3 1.86 0 1.89 1.74 1.89 3.1V20h3.37Z" />
+    </svg>
+  );
+}
+
 export function SearchIcon({ className = "size-4" }: { className?: string }) {
   return (
     <svg
