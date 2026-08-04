@@ -13,6 +13,7 @@ export type PostMeta = {
   date: string;
   description: string;
   tags: string[];
+  coverImage?: string;
 };
 
 export type Post = PostMeta & {
@@ -37,6 +38,7 @@ function readPostMeta(slug: string): PostMeta {
     date: data.date,
     description: data.description ?? "",
     tags: data.tags ?? [],
+    coverImage: data.coverImage,
   };
 }
 
@@ -56,6 +58,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     date: data.date,
     description: data.description ?? "",
     tags: data.tags ?? [],
+    coverImage: data.coverImage,
     contentHtml: processedContent.toString(),
   };
 }
