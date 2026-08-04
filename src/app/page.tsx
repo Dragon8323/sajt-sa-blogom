@@ -1,6 +1,7 @@
 import { getAllPosts } from "@/lib/posts";
 import FeaturedPostCard from "@/components/FeaturedPostCard";
 import Hero from "@/components/Hero";
+import NewsletterSection from "@/components/NewsletterSection";
 
 export default function Home() {
   const latestPosts = getAllPosts().slice(0, 6);
@@ -19,6 +20,8 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      <NewsletterSection />
     </div>
   );
 }
